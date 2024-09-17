@@ -1,26 +1,17 @@
-# spotify-database
+# spotify-database <img src="image.png" alt="Texto alternativo" width="45" />
 
 ## overview
 
-This Clojure project aims to interact with the Spotify API to retrieve and store information about my playlists and musics.
-
-## project structure
-
-The project consists of a namespace (`spotify-database.core`) containing functions to handle the Spotify API authentication. Here's a brief overview of the current implementation:
-
-- **Client Credentials:**
-  - The Spotify API requires authentication via the client credentials grant type. The client ID and client secret are provided and used to obtain an access token.
-  - The `token-request` function sends a POST request to the Spotify Authorization API to obtain an access token.
-  - The `request-token!` function attempts to retrieve the access token and prints it. In case of an error, it prints an error message.
+This Clojure project aims to interact with the Spotify API to retrieve and store information about playlists and musics.
 
 ## getting started
 
 To use this project, follow these steps:
 
-1. **Set up Spotify Developer Account:**
+1. **Set up spotify developer account**
    - Obtain a client ID and client secret by creating a Spotify Developer account and registering a new application.
 
-2. **Configure Project:**
+2. **Configure project**
    - System properties can be set in the REPL using:
     ```clojure
     (System/setProperty "SPOTIFY_CLIENT_ID" "your_client_id_here")
@@ -32,8 +23,18 @@ To use this project, follow these steps:
     (def client-secret (System/getProperty "SPOTIFY_CLIENT_SECRET"))
     ```
 
-3. **Run the Project:**
-   - Execute the `request-token!` function to obtain an access token from the Spotify API.
+## project structure
+
+- **credentials.clj**
+  - To run this project, it is necessary to create a namespace called `credentials`, wich will have a function `set-credentials` that setProperty for your specific cliend-id and client-secret (as demonstrated above).
+
+- **token.clj**
+  - The Spotify API requires authentication via the client credentials grant type. The client ID and client secret are provided and used to obtain an access token.
+  - The `token-request` function sends a POST request to the Spotify Authorization API to obtain an access token.
+  - The `request-token!` function attempts to retrieve the access token and prints it. In case of an error, it prints an error message.
+
+- **playlist.clj**
+  - This namespace will search for all the playlists in this user's spotify.
 
 ## dependencies
 

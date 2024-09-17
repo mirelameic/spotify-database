@@ -36,5 +36,3 @@
          token)
        (catch Exception e
          (println "token-request error: " e))))
-
-(def token (request-token!))
