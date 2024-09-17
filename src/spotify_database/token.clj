@@ -1,9 +1,11 @@
-(ns spotify-database.core
+(ns spotify-database.token
   (:import [java.util Base64])
   (:require [clj-http.client :as http]
-            [clojure.data.json :as json])
+            [clojure.data.json :as json]
+            [spotify-database.credentials :as creds])
             (:gen-class))
 
+(creds/set-credentials)
 (def client-id (System/getProperty "SPOTIFY_CLIENT_ID"))
 (def client-secret (System/getProperty "SPOTIFY_CLIENT_SECRET"))
 
@@ -30,6 +32,9 @@
                     (json/read-str
                      (:body response)
                      :key-fn keyword))]
-         (println "Token:" token))
+         (println "Token:" token)
+         token)
        (catch Exception e
          (println "token-request error: " e))))
+
+(def token (request-token!))

@@ -1,6 +1,6 @@
-(ns spotify-database.core-test
+(ns spotify-database.token-test
   (:require [clojure.test :refer :all]
-            [spotify-database.core :refer :all]))
+            [spotify-database.token :refer :all]))
 
 (deftest a-test
   (testing "FIXME, I fail."

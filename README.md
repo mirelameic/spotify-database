@@ -26,7 +26,7 @@ To use this project, follow these steps:
     (System/setProperty "SPOTIFY_CLIENT_ID" "your_client_id_here")
     (System/setProperty "SPOTIFY_CLIENT_SECRET" "your_client_secret_here")
     ```
-  - The client ID and client secret are then accessed in the code as follows:
+    - The client ID and client secret are then accessed in the code as follows:
     ```clojure
     (def client-id (System/getProperty "SPOTIFY_CLIENT_ID"))
     (def client-secret (System/getProperty "SPOTIFY_CLIENT_SECRET"))
@@ -37,8 +37,8 @@ To use this project, follow these steps:
 
 ## dependencies
 
-- [clj-http](https://github.com/dakrone/clj-http): A Clojure HTTP library for making HTTP requests.
-- [clojure.data.json](https://github.com/clojure/data.json): A Clojure library for reading and writing JSON.
+- [clj-http](https://github.com/dakrone/clj-http): Library for making HTTP requests.
+- [clojure.data.json](https://github.com/clojure/data.json): Library for reading and writing JSON.
 
 ## future steps
 
