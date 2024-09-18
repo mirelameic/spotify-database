@@ -5,4 +5,4 @@
 
 (def token (token/request-token!))
 
-(def playlists (playlist/get-playlists token))
+(def playlists (playlist/request-playlists! token))
