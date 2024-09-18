@@ -1,4 +1,4 @@
-# spotify-database <img src="image.png" alt="Texto alternativo" width="45" />
+# <img src="image.png" alt="Texto alternativo" width="40" /> spotify-database 
 
 ## overview
 
